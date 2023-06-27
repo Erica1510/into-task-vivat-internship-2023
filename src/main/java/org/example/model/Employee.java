@@ -1,7 +1,6 @@
-package org.example;
+package org.example.model;
 
 import java.time.LocalDate;
-import java.time.Period;
 import java.util.List;
 
 public class Employee {

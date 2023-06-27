@@ -1,9 +1,8 @@
-import org.example.Employee;
-import org.example.EmployeeDataProcessor;
+import org.example.model.Employee;
+import org.example.service.EmployeeDataProcessor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
