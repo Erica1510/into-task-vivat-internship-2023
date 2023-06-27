@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.model.Employee;
 import org.example.service.EmployeeDataProcessor;
+import org.example.service.EmployeeService;
 
 import java.util.List;
 import java.util.Set;
@@ -14,7 +15,7 @@ public class Main {
         EmployeeDataProcessor dataProcessor = new EmployeeDataProcessor();
         List<Employee> employees = dataProcessor.processEmployeeData(filePath);
         dataProcessor.processEmployeeData(employees.toString());
-        Set<String> uniqueCompanies = dataProcessor.getUniqueCompanies(employees);
+        Set<String> uniqueCompanies = EmployeeService.getUniqueCompanies(employees);
 
         System.out.println("Unique Companies:");
         for (String company : uniqueCompanies) {

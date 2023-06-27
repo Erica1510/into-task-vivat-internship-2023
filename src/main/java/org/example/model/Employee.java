@@ -8,15 +8,12 @@ public class Employee {
     private String lastName;
     private int age;
     private List<Workplace> workplaces;
-    /*private LocalDate startDate;
-    private LocalDate endDate;*/
 
     public Employee(String firstName, String lastName, int age, LocalDate startDate, LocalDate endDate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        /*this.startDate = startDate;
-        this.endDate = endDate;*/
+
     }
 
     public Employee(String firstName, String lastName, int age, List<Workplace> workplaces) {

@@ -30,16 +30,12 @@ public class EmployeeDataProcessor {
                 List<Workplace> workplaces = new ArrayList<>();
 
                 for (int i = 3; i < data.length; i += 3) {
-/*
-                    String company = data[i];
-*/
+
 
                     String[] company  = data[i].split(";");
                     String name = company[0];
                     LocalDate startDate = LocalDate.parse(company[1],DATE_FORMATTER);
                     LocalDate endDate = LocalDate.parse(company[2],DATE_FORMATTER);
-                    /*LocalDate startDate = LocalDate.parse(data[i + 1], DATE_FORMATTER);
-                    LocalDate endDate = LocalDate.parse(data[i + 2], DATE_FORMATTER);*/
                     workplaces.add(new Workplace(name, startDate, endDate));
                 }
                 Employee employee = new Employee(firstName,lastName,age,workplaces);
@@ -53,16 +49,4 @@ public class EmployeeDataProcessor {
         return employees;
     }
 
-    public Set<String> getUniqueCompanies(List<Employee> employees) {
-        Set<String> uniqueCompanies = new HashSet<>();
-
-        for (Employee employee : employees) {
-            List<Workplace> workplaces = employee.getWorkplaces();
-            for (Workplace workplace : workplaces) {
-                uniqueCompanies.add(workplace.getCompany());
-            }
-        }
-
-        return uniqueCompanies;
-    }
 }
